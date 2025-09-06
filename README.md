@@ -6,6 +6,7 @@ The player takes the role of a hacker building their virtual empire, unlocking u
 ---
 
 ## 📂 Project Structure
+```
 .
 ├── assets/          # Raw source files (Aseprite, PSD, WAV, design docs, etc.)
 ├── game/            # Godot project
@@ -15,6 +16,7 @@ The player takes the role of a hacker building their virtual empire, unlocking u
 │   ├── ui/          # UI components (panels, buttons, labels)
 │   └── main.tscn    # Root scene
 └── README.md
+```
 
 ---
 
