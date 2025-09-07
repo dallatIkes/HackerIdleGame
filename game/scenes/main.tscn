@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://r4dgtbmuramh"]
+
+[ext_resource type="PackedScene" uid="uid://drote00a1oj4l" path="res://game/scenes/ScreenTemplate.tscn" id="1_20rwd"]
+
+[node name="Main" type="Node"]
+
+[node name="Control" parent="." instance=ExtResource("1_20rwd")]
