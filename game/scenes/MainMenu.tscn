@@ -1,11 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpnwtlnvayoty"]
+[gd_scene load_steps=3 format=3 uid="uid://bpnwtlnvayoty"]
 
 [ext_resource type="PackedScene" uid="uid://drote00a1oj4l" path="res://game/scenes/ScreenTemplate.tscn" id="1_v48kw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v48kw"]
+font_size = 64
 
 [node name="Control" instance=ExtResource("1_v48kw")]
 
 [node name="ColorRect" parent="Panel" index="0"]
-color = Color(1, 0, 0, 1)
+color = Color(0, 0, 1, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/ColorRect" index="0"]
 layout_mode = 1
@@ -19,16 +22,20 @@ alignment = 1
 [node name="TitleLabel" type="Label" parent="Panel/ColorRect/VBoxContainer" index="0"]
 layout_mode = 2
 text = "Hacker Idle"
+label_settings = SubResource("LabelSettings_v48kw")
 horizontal_alignment = 1
 
 [node name="StartButton" type="Button" parent="Panel/ColorRect/VBoxContainer" index="1"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 64
 text = "Start"
 
 [node name="SettingsButton" type="Button" parent="Panel/ColorRect/VBoxContainer" index="2"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 64
 text = "Settings"
 
 [node name="QuitButton" type="Button" parent="Panel/ColorRect/VBoxContainer" index="3"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 64
 text = "Quit"
