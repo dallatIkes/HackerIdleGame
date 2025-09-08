@@ -5,11 +5,14 @@ Welcome to the project documentation! This folder contains all design and user e
 ---
 
 ## 📑 Table of Contents
-- [Wireframes](#-wireframes)
-- [User Flows](#-user-flows)
-- [Technical Documentation](#-technical-documentation)
-- [Folder Structure](#-folder-structure)
-- [Editing & Export Tips](#-editing--export-tips)
+- [Project Documentation](#project-documentation)
+  - [📑 Table of Contents](#-table-of-contents)
+  - [🖼 Wireframes](#-wireframes)
+  - [🔀 User Flows](#-user-flows)
+  - [🧩 UML Class Diagrams](#-uml-class-diagrams)
+  - [⚙️ Technical Documentation](#️-technical-documentation)
+  - [📂 Folder Structure](#-folder-structure)
+  - [✏️ Editing \& Export Tips](#️-editing--export-tips)
 
 ---
 
@@ -44,6 +47,22 @@ graph TD
 
 ---
 
+## 🧩 UML Class Diagrams
+To keep track of the game’s architecture and relationships between systems, UML diagrams are included. Mermaid diagrams are also used for this issue.
+
+Example : 
+```mermaid
+classDiagram
+    class Player{
+        - int money
+        - string name
+        + getMoney()
+    }
+
+```
+
+---
+
 ## ⚙️ Technical Documentation
 This section is for architecture notes, technical decisions, and setup guides.  
 See `architecture.md` for details (build targets, CI/CD, test strategy, styling rules, etc.).
@@ -59,6 +78,8 @@ docs/
  ├── ux_flows/
  │    ├── *.md               (Mermaid diagrams)
  │    └── *.png              (optional image exports)
+ ├── uml/ 
+ │    └── *.fig / *.drawio   (class diagrams)
  ├── architecture.md
  └── README.md               (this file)
 ```
