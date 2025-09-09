@@ -1,0 +1,28 @@
+classDiagram
+class Currency {
+  
+  %% attributes
+
+  - name : String
+  - amount : float
+  - rate : float
+
+  %% methods
+
+  %% getters
+
+  + getName() : String
+  + getAmount() : float
+  + getRate() : float
+
+  %% setters
+
+  + setName(name : String) : void
+  + setAmount(amount : float) : void
+  + setRate(rate : float) : void
+  
+  %% other
+  
+  + gain(amount : float) : void
+  + spend(amount : float) : void
+}
