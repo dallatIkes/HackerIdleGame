@@ -9,6 +9,7 @@ The player takes the role of a hacker building their virtual empire, unlocking u
 ```
 .
 ├── assets/          # Raw source files (Aseprite, PSD, WAV, design docs, etc.)
+├── docs/            # Project documentation
 ├── game/            # Godot project
 │   ├── assets/      # Optimized assets used by Godot (PNG, OGG, TTF...)
 │   ├── scenes/      # Game scenes (menus, gameplay, UI)
