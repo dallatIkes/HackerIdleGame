@@ -1,0 +1,18 @@
+```mermaid
+flowchart TB
+
+%% App states
+App[App]
+Menu[Title screen]
+Game[Main Game loop]
+Settings[Settings]
+Quit[Quit the app]
+
+%% Transitions
+App --Launching the app-->Menu
+Menu --Start button--> Game
+Menu --Settings button--> Settings
+Menu --Quit button--> Quit
+Game --Return button--> Menu
+Settings --Return button--> Menu
+```
