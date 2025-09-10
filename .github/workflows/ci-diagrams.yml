@@ -39,7 +39,9 @@ jobs:
 
       - name: Generate Mermaid diagrams
         run: |
-          find docs -type f -name "*.mmd" -exec sh -c 'mmdc -i "$1" -o "${1%.mmd}.svg"' _ {} \;
+          chmod +x ./docs/generate_svg.sh
+          find docs -type f -name "*.mmd" -exec ./docs/generate_svg.sh {} \;
+
 
       - name: Commit and push diagrams
         run: |
