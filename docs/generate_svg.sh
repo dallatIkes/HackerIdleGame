@@ -20,7 +20,7 @@ fi
 OUTPUT_FILE="${INPUT_FILE%.mmd}.svg"
 
 # Run mermaid-cli with no-sandbox config
-mmdc -i "$INPUT_FILE" -o "$OUTPUT_FILE" --puppeteerConfigFile puppeteer.config.json
+mmdc -i "$INPUT_FILE" -o "$OUTPUT_FILE" --puppeteerConfigFile docs/puppeteer.config.json
 
 if [ $? -eq 0 ]; then
   echo "✅ Generated: $OUTPUT_FILE"
