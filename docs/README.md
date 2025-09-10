@@ -18,13 +18,13 @@ Welcome to the project documentation! This folder contains all design and user e
 
 ## 🖼 Wireframes
 Wireframes represent the layout and structure of each screen in the app.  
-Sources are stored in `docs/wireframes/` (in `.fig` or `.drawio` format) and exported versions in PNG/PDF for quick access.
+Sources are stored in `docs/wireframes/` (in `.svg` format).
 
-- **Home Screen** → `wireframes/exports/home.png`  
-- **Login Screen** → `wireframes/exports/login.png`  
-- **Dashboard** → `wireframes/exports/dashboard.png`
+- **Home Screen** → `wireframes/exports/title-screen.png`  
+- **Settings Screen** → `wireframes/exports/settings.png`  
+- **Main Game Screen** → `wireframes/exports/game-screen.png`
 
-> Keep both the editable source files and the exported images in the repo so they’re easy to update and to review in PRs.
+> All the files are exported from Penpot.
 
 ---
 
@@ -90,8 +90,7 @@ See `architecture.md` for details (build targets, CI/CD, test strategy, styling 
 ```
 docs/
  ├── wireframes/
- │    ├── *.fig / *.drawio   (source files)
- │    └── exports/           (PNG / PDF exports)
+ │    └── *.svg              (SVG exports)
  ├── ux_flows/
  │    ├── *.mmd              (Mermaid flowchart diagrams)
  │    └── *.svg              (SVG exports)
@@ -105,7 +104,6 @@ docs/
 ---
 
 ## ✏️ Editing & Export Tips
-- **draw.io (diagrams.net)**: ideal for versioning directly in Git; save `.drawio` and also export PNG for quick viewing.  
 - **Mermaid**: use code fences with `mermaid` in `.mmd` files; GitHub renders them automatically.  
 - **Naming**: prefer `screen-name_v1.fig`, `screen-name.drawio`, `screen-name.png` for clarity.  
 - **Reviews**: link to images/flows from PR descriptions so reviewers can quickly see UI changes.
