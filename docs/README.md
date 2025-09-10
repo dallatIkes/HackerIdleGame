@@ -32,18 +32,28 @@ Sources are stored in `docs/wireframes/` (in `.fig` or `.drawio` format) and exp
 User flows describe how users navigate between pages.  
 We use Mermaid diagrams inside Markdown files so GitHub can render them.
 
-Example navigation flow (save this in `ux_flows/navigation_flow.md`):
+Example navigation flow (save this in `ux_flows/main-flow.mmd`):
 
 ```mermaid
-graph TD
-    Home["Home"] --> Login["Login"]
-    Home --> Register["Register"]
-    Login --> Dashboard["Dashboard"]
-    Dashboard --> Settings["Settings"]
-    Dashboard --> Logout["Logout"]
+flowchart LR
+
+%% App states
+App[App]
+Menu[Title screen]
+Game[Main Game loop]
+Settings[Settings]
+Quit[Quit the app]
+
+%% Transitions
+App --Launching the app-->Menu
+Menu --Start button--> Game
+Menu --Settings button--> Settings
+Menu --Quit button--> Quit
+Game --Return button--> Menu
+Settings --Return button--> Menu
 ```
 
-> Tip: You can create multiple flows (onboarding, main loop, settings) as separate `.md` files.
+> Tip: You can create multiple flows (onboarding, main loop, settings) as separate `.mmd` files.
 
 ---
 
@@ -53,12 +63,19 @@ To keep track of the game’s architecture and relationships between systems, UM
 Example : 
 ```mermaid
 classDiagram
-    class Player{
-        - int money
-        - string name
-        + getMoney()
-    }
-
+class Currency {
+  - name : String
+  - amount : float
+  - rate : float
+  + getName() : String
+  + getAmount() : float
+  + getRate() : float
+  + setName(name : String) : void
+  + setAmount(amount : float) : void
+  + setRate(rate : float) : void
+  + gain(amount : float) : void
+  + spend(amount : float) : void
+}
 ```
 
 ---
@@ -76,10 +93,11 @@ docs/
  │    ├── *.fig / *.drawio   (source files)
  │    └── exports/           (PNG / PDF exports)
  ├── ux_flows/
- │    ├── *.md               (Mermaid diagrams)
- │    └── *.png              (optional image exports)
+ │    ├── *.mmd              (Mermaid flowchart diagrams)
+ │    └── *.svg              (SVG exports)
  ├── uml/ 
- │    └── *.fig / *.drawio   (class diagrams)
+ │    ├── *.mmd              (Mermaid class diagrams)
+ │    └── *.svg              (SVG exports)
  ├── architecture.md
  └── README.md               (this file)
 ```
@@ -88,6 +106,6 @@ docs/
 
 ## ✏️ Editing & Export Tips
 - **draw.io (diagrams.net)**: ideal for versioning directly in Git; save `.drawio` and also export PNG for quick viewing.  
-- **Mermaid**: use code fences with `mermaid` in `.md` files; GitHub renders them automatically.  
+- **Mermaid**: use code fences with `mermaid` in `.mmd` files; GitHub renders them automatically.  
 - **Naming**: prefer `screen-name_v1.fig`, `screen-name.drawio`, `screen-name.png` for clarity.  
 - **Reviews**: link to images/flows from PR descriptions so reviewers can quickly see UI changes.
