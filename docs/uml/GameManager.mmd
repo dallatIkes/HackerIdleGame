@@ -1,0 +1,40 @@
+classDiagram
+class Currency {
+  
+  %% attributes
+
+  - player : Player
+  - saveSystem : SaveSystem
+  - lastSaveTime : DateTime
+  - upgrades : List<Upgrade>
+  - achievements : List<Achievement>
+
+  %% methods
+
+  %% getters
+
+  + getPlayer() : Player
+  + getSaveSystem() : SaveSystem
+  + getLastSaveTime() : DateTime
+  + getUpgrades() : List<Upgrade>
+  + getAchievements() : List<Achievement>
+
+  %% setters
+
+  + setPlayer(Player player) : void
+  + setSaveSystem(SaveSystem saveSystem) : void
+  + setLastSaveTime(DateTime lastSaveTime) : void
+  + setUpgrades(List<Upgrade> upgrades) : void
+  + setAchievements(List<Achievement> achievements) : void
+  
+  %% other
+  
+  + saveGame() : void
+  + loadGame() : void
+  + resetGame() : void
+  + calculateOfflineProgress() : float
+  + addCurrency(Currency currency, float amount) : void
+  + spendCurrency(Currency currency, float amount) : void
+  + applyUpgrade(Upgrade upgrade) : void
+  + unclockAchievement(Achievement achievement) : void
+}
