@@ -1,0 +1,45 @@
+name: Generate Diagrams
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "docs/**/*.mmd"
+      - "docs/**/*.puml"
+
+jobs:
+  generate-diagrams:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Java (needed for PlantUML)
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Install PlantUML
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y plantuml
+
+      - name: Generate PlantUML diagrams
+        run: |
+          find docs -type f -name "*.puml" -exec plantuml -tsvg {} \;
+
+      - name: Generate Mermaid diagrams
+        uses: neenjaw/mermaid-cli-action@v6
+        with:
+          files: "docs/**/*.mmd"
+          output: "."
+
+      - name: Commit and push diagrams
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/**/*.svg
+          git commit -m "Auto-update diagrams [skip ci]" || echo "No changes to commit"
+          git push
