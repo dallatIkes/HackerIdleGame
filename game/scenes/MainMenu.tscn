@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://drote00a1oj4l" path="res://game/scenes/ScreenTemplate.tscn" id="1_v48kw"]
 [ext_resource type="Texture2D" uid="uid://e3an852rk00x" path="res://game/assets/icon.svg" id="2_34ntp"]
-[ext_resource type="Script" uid="uid://b0v05jcuthok2" path="res://game/scripts/MainMenu.cs" id="2_lg33h"]
+[ext_resource type="Script" uid="uid://c5lynsbpxq8je" path="res://game/scripts/MainMenu.cs" id="2_lg33h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v48kw"]
 font_size = 64

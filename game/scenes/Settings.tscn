@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6ap828b24slt"]
 
 [ext_resource type="PackedScene" uid="uid://drote00a1oj4l" path="res://game/scenes/ScreenTemplate.tscn" id="1_lrv7l"]
-[ext_resource type="Script" uid="uid://c3n6kahgolosm" path="res://game/scripts/Settings.cs" id="2_fgako"]
+[ext_resource type="Script" uid="uid://degf4jbqa3ejw" path="res://game/scripts/Settings.cs" id="2_fgako"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2fv1l"]
 font_size = 64
@@ -27,24 +27,26 @@ text = "SETTINGS"
 label_settings = SubResource("LabelSettings_2fv1l")
 horizontal_alignment = 1
 
-[node name="Sound settings" type="VBoxContainer" parent="Panel/ColorRect/VBoxContainer" index="1"]
+[node name="Sound-settings" type="VBoxContainer" parent="Panel/ColorRect/VBoxContainer" index="1"]
 layout_mode = 2
 
-[node name="Sound label" type="Label" parent="Panel/ColorRect/VBoxContainer/Sound settings" index="0"]
+[node name="Sound-label" type="Label" parent="Panel/ColorRect/VBoxContainer/Sound-settings" index="0"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "SOUND"
 horizontal_alignment = 1
 
-[node name="Sound" type="HSlider" parent="Panel/ColorRect/VBoxContainer/Sound settings" index="1"]
+[node name="Sound" type="HSlider" parent="Panel/ColorRect/VBoxContainer/Sound-settings" index="1"]
 layout_mode = 2
-step = 10.0
+max_value = 1.0
+step = 0.1
+value = 1.0
 tick_count = 11
 
-[node name="Sound volume" type="Label" parent="Panel/ColorRect/VBoxContainer/Sound settings" index="2"]
+[node name="Sound-volume-label" type="Label" parent="Panel/ColorRect/VBoxContainer/Sound-settings" index="2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "TODO : connect to slider's value"
+text = "Volume : 100"
 horizontal_alignment = 1
 
 [node name="Return" type="Button" parent="Panel/ColorRect/VBoxContainer" index="2"]
@@ -52,4 +54,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "Save & Return"
 
+[connection signal="value_changed" from="Panel/ColorRect/VBoxContainer/Sound-settings/Sound" to="." method="_on_sound_value_changed"]
 [connection signal="pressed" from="Panel/ColorRect/VBoxContainer/Return" to="." method="_on_return_pressed"]
