@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6ap828b24slt"]
+[gd_scene load_steps=4 format=3 uid="uid://c6ap828b24slt"]
 
 [ext_resource type="PackedScene" uid="uid://drote00a1oj4l" path="res://game/scenes/ScreenTemplate.tscn" id="1_lrv7l"]
+[ext_resource type="Script" uid="uid://c3n6kahgolosm" path="res://game/scripts/Settings.cs" id="2_fgako"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2fv1l"]
 font_size = 64
 
 [node name="Settings" instance=ExtResource("1_lrv7l")]
+script = ExtResource("2_fgako")
 
 [node name="ColorRect" parent="Panel" index="0"]
 color = Color(1, 0, 0, 1)
@@ -49,3 +51,5 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "Save & Return"
+
+[connection signal="pressed" from="Panel/ColorRect/VBoxContainer/Return" to="." method="_on_return_pressed"]

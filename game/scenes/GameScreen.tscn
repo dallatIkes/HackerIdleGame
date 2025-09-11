@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://2ctqnrnn40u5"]
+[gd_scene load_steps=4 format=3 uid="uid://2ctqnrnn40u5"]
 
 [ext_resource type="PackedScene" uid="uid://drote00a1oj4l" path="res://game/scenes/ScreenTemplate.tscn" id="1_ngl22"]
+[ext_resource type="Script" uid="uid://cb24ye43p0dx3" path="res://game/scripts/GameScreen.cs" id="2_7kta8"]
 [ext_resource type="Texture2D" uid="uid://e3an852rk00x" path="res://game/assets/icon.svg" id="2_ou80d"]
 
 [node name="Game Screen" instance=ExtResource("1_ngl22")]
+script = ExtResource("2_7kta8")
 
 [node name="Top Menu" type="ColorRect" parent="Panel/ColorRect" index="0"]
 custom_minimum_size = Vector2(0, 200)
@@ -86,3 +88,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "BLACK
 MARKET"
+
+[connection signal="pressed" from="Panel/ColorRect/Top Menu/HBoxContainer/Menu button" to="." method="_on_menu_button_pressed"]
