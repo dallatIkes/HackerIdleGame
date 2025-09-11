@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://2ctqnrnn40u5"]
+
+[ext_resource type="PackedScene" uid="uid://drote00a1oj4l" path="res://game/scenes/ScreenTemplate.tscn" id="1_ngl22"]
+[ext_resource type="Texture2D" uid="uid://e3an852rk00x" path="res://game/assets/icon.svg" id="2_ou80d"]
+
+[node name="Control" instance=ExtResource("1_ngl22")]
+
+[node name="Top Menu" type="ColorRect" parent="Panel/ColorRect" index="0"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/ColorRect/Top Menu" index="0"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/separation = 250
+
+[node name="Menu button" type="Button" parent="Panel/ColorRect/Top Menu/HBoxContainer" index="0"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Menu"
+
+[node name="Crypto label" type="Label" parent="Panel/ColorRect/Top Menu/HBoxContainer" index="1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "$ 12.23"
+
+[node name="CPU label" type="Label" parent="Panel/ColorRect/Top Menu/HBoxContainer" index="2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "2.30 GHz"
+
+[node name="TextureRect" type="TextureRect" parent="Panel/ColorRect" index="1"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 399.0
+offset_right = 156.0
+offset_bottom = 527.0
+scale = Vector2(8, 8)
+texture = ExtResource("2_ou80d")
+
+[node name="Footer Menu" type="ColorRect" parent="Panel/ColorRect" index="2"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/ColorRect/Footer Menu" index="0"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/separation = 105
+
+[node name="Home button" type="Button" parent="Panel/ColorRect/Footer Menu/HBoxContainer" index="0"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Menu"
+
+[node name="Hack button" type="Button" parent="Panel/ColorRect/Footer Menu/HBoxContainer" index="1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "HACK"
+
+[node name="Upgrades button" type="Button" parent="Panel/ColorRect/Footer Menu/HBoxContainer" index="2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "UPGRADES"
+
+[node name="Black Market button" type="Button" parent="Panel/ColorRect/Footer Menu/HBoxContainer" index="3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "BLACK
+MARKET"
