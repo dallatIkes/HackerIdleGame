@@ -10,6 +10,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Control" parent="." instance=ExtResource("1_20rwd")]
+[node name="Main Menu" parent="." instance=ExtResource("1_20rwd")]
 layout_mode = 1
-script = null
