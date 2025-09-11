@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://2ctqnrnn40u5"]
 
 [ext_resource type="PackedScene" uid="uid://drote00a1oj4l" path="res://game/scenes/ScreenTemplate.tscn" id="1_ngl22"]
-[ext_resource type="Script" uid="uid://cb24ye43p0dx3" path="res://game/scripts/GameScreen.cs" id="2_7kta8"]
+[ext_resource type="Script" uid="uid://daygvqvosu2qq" path="res://game/scripts/GameScreen.cs" id="2_7kta8"]
 [ext_resource type="Texture2D" uid="uid://e3an852rk00x" path="res://game/assets/icon.svg" id="2_ou80d"]
 
 [node name="Game Screen" instance=ExtResource("1_ngl22")]
