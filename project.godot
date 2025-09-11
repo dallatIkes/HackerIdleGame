@@ -18,6 +18,7 @@ config/icon="uid://e3an852rk00x"
 [autoload]
 
 Music="*res://game/scenes/Music.tscn"
+GameManager="*res://game/scenes/GameManager.tscn"
 
 [display]
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://r4dgtbmuramh"]
+[gd_scene load_steps=4 format=3 uid="uid://r4dgtbmuramh"]
 
 [ext_resource type="PackedScene" uid="uid://bpnwtlnvayoty" path="res://game/scenes/MainMenu.tscn" id="1_20rwd"]
 [ext_resource type="PackedScene" uid="uid://cidpiksxf6pw6" path="res://game/scenes/Music.tscn" id="1_jbjdl"]
+[ext_resource type="PackedScene" uid="uid://b086loyh5tfx3" path="res://game/scenes/GameManager.tscn" id="3_gp8w2"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,3 +16,5 @@ grow_vertical = 2
 
 [node name="Main Menu" parent="." instance=ExtResource("1_20rwd")]
 layout_mode = 1
+
+[node name="Game" parent="." instance=ExtResource("3_gp8w2")]
