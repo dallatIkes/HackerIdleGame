@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpnwtlnvayoty"]
+[gd_scene load_steps=5 format=3 uid="uid://bpnwtlnvayoty"]
 
 [ext_resource type="PackedScene" uid="uid://drote00a1oj4l" path="res://game/scenes/ScreenTemplate.tscn" id="1_v48kw"]
 [ext_resource type="Texture2D" uid="uid://e3an852rk00x" path="res://game/assets/icon.svg" id="2_34ntp"]
+[ext_resource type="Script" uid="uid://bq0m3j16o4gla" path="res://game/scripts/MainMenu.cs" id="2_lg33h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v48kw"]
 font_size = 64
 
 [node name="Main Menu" instance=ExtResource("1_v48kw")]
+script = ExtResource("2_lg33h")
 
 [node name="ColorRect" parent="Panel" index="0"]
 color = Color(0, 0, 1, 1)
