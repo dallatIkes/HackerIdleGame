@@ -12,3 +12,4 @@ grow_vertical = 2
 
 [node name="Control" parent="." instance=ExtResource("1_20rwd")]
 layout_mode = 1
+script = null

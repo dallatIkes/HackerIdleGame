@@ -6,7 +6,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_v48kw"]
 font_size = 64
 
-[node name="Control" instance=ExtResource("1_v48kw")]
+[node name="Main Menu" instance=ExtResource("1_v48kw")]
 
 [node name="ColorRect" parent="Panel" index="0"]
 color = Color(0, 0, 1, 1)

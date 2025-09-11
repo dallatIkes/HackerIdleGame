@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://drote00a1oj4l" path="res://game/scenes/ScreenTemplate.tscn" id="1_ngl22"]
 [ext_resource type="Texture2D" uid="uid://e3an852rk00x" path="res://game/assets/icon.svg" id="2_ou80d"]
 
-[node name="Control" instance=ExtResource("1_ngl22")]
+[node name="Game Screen" instance=ExtResource("1_ngl22")]
 
 [node name="Top Menu" type="ColorRect" parent="Panel/ColorRect" index="0"]
 custom_minimum_size = Vector2(0, 200)
