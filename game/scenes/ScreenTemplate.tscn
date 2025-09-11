@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drote00a1oj4l"]
 
-[node name="Control" type="Control"]
+[node name="Template" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

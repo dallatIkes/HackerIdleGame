@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6ap828b24slt"]
+
+[ext_resource type="PackedScene" uid="uid://drote00a1oj4l" path="res://game/scenes/ScreenTemplate.tscn" id="1_lrv7l"]
+[ext_resource type="Script" uid="uid://c3n6kahgolosm" path="res://game/scripts/Settings.cs" id="2_fgako"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2fv1l"]
+font_size = 64
+
+[node name="Settings" instance=ExtResource("1_lrv7l")]
+script = ExtResource("2_fgako")
+
+[node name="ColorRect" parent="Panel" index="0"]
+color = Color(1, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ColorRect" index="0"]
+layout_mode = 0
+offset_right = 1075.0
+offset_bottom = 1915.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="Panel/ColorRect/VBoxContainer" index="0"]
+layout_mode = 2
+text = "SETTINGS"
+label_settings = SubResource("LabelSettings_2fv1l")
+horizontal_alignment = 1
+
+[node name="Sound settings" type="VBoxContainer" parent="Panel/ColorRect/VBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="Sound label" type="Label" parent="Panel/ColorRect/VBoxContainer/Sound settings" index="0"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "SOUND"
+horizontal_alignment = 1
+
+[node name="Sound" type="HSlider" parent="Panel/ColorRect/VBoxContainer/Sound settings" index="1"]
+layout_mode = 2
+step = 10.0
+tick_count = 11
+
+[node name="Sound volume" type="Label" parent="Panel/ColorRect/VBoxContainer/Sound settings" index="2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "TODO : connect to slider's value"
+horizontal_alignment = 1
+
+[node name="Return" type="Button" parent="Panel/ColorRect/VBoxContainer" index="2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Save & Return"
+
+[connection signal="pressed" from="Panel/ColorRect/VBoxContainer/Return" to="." method="_on_return_pressed"]
